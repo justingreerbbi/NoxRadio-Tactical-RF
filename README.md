@@ -194,13 +194,19 @@ Enter your callsign when asked (or leave it defualt)
 
 Visit `http://<pi-ip>:8080`
 
-## Service Created
+## Services Created
 
 NoxRadio install and enables these systemd services so it everything runs on statup.
 
 - `direwolf.service` Runs Direwolf with `/etc/direwolf.conf`.
 - `noxradio-ax25-bridge.service` bridges KISS TCP to AX.25 interface `ax0`.
 - `noxradio-web.service` Runs the Web UI / API on port `8080`.
+
+## Useful Commands
+
+- `sudo systemctl restart noxradio-web.service` Restart the Web UI Service
+- `sudo systemctl restart direwolf.service` Restart Direwolf Service
+- `sudo systemctl restart noxradio-ax25-bridge.service` Restart AX.25 Bridge Service
 
 ## Legal / Compliance Disclaimer
 
